@@ -9,7 +9,7 @@ export default function Page() {
 						Get in Touch
 					</p>
 					<p className="text-text-muted-light dark:text-text-muted-dark text-lg font-normal leading-normal mt-4 max-w-2xl mx-auto">
-						We&apros;d love to hear from you. Reach out htmlFor a consultation, a project quote, or any questions you may have.
+						We'd love to hear from you. Reach out htmlFor a consultation, a project quote, or any questions you may have.
 					</p>
 				</div>
 				{/* Main Content Grid */}

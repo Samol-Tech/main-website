@@ -1,16 +1,20 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 export function Footer() {
   return (
     <footer
       className="w-full bg-[#1A202C] text-[#F4F4F4] bg-cover"
-      style={{backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1) 100%),  url('/image/footer-bg.jpg')"}}
+      style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 1) 100%),  url('/image/footer-bg.jpg')" }}
     >
       <div className="mx-auto max-w-7xl px-6 py-16 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-6">
             <Link className="flex items-center gap-2 text-2xl font-bold text-white" href="/">
-              <span className="material-symbols-outlined text-primary text-3xl"> hub </span>
+              <Image src="/image/logo.jpeg" alt="SamolTech Consult Logo"
+                width={40}
+                height={40}
+              />
               <span>SamolTech&nbsp;Consult</span>
             </Link>
             <p className="text-sm text-[#A0AEC0]">Engineering digital solutions that drive growth and innovation for businesses worldwide.</p>
@@ -26,7 +30,7 @@ export function Footer() {
               <div className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary/80">call</span>
                 <a href="tel:+2348139723521" className="text-text-muted-light dark:text-text-muted-dark text-sm">(234) 813 9723 521</a>
-                
+
               </div>
               <div className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-primary/80">mail</span>
@@ -144,7 +148,7 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-16 border-t border-gray-700/50 pt-8 flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <p className="text-sm text-[#A0AEC0]">© 2023 SamolTech&nbsp;Consult. All Rights Reserved.</p>
+          <p className="text-sm text-[#A0AEC0]">© 2020 - {new Date().getFullYear()} SamolTech&nbsp;Consult. All Rights Reserved.</p>
           <div className="flex items-center gap-6">
             <Link className="text-sm text-[#A0AEC0] transition-colors hover:text-white" href="#">
               Privacy Policy
