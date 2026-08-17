@@ -1,8 +1,11 @@
+import typography from "@tailwindcss/typography";
+
 // Tailwind config, wired up via `@config` in app/globals.css.
 // Mirrors the theme previously passed to the Tailwind CDN runtime in public/app.js.
 const config = {
   darkMode: "class",
   content: ["./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
+  plugins: [typography],
   theme: {
     extend: {
       colors: {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { createContactSubmission } from "./actions";
 
 export const metadata: Metadata = {
 	title: "Contact Us",
@@ -31,16 +32,22 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function Page() {
+export default async function Page({
+	searchParams,
+}: {
+	searchParams: Promise<{ success?: string; error?: string }>;
+}) {
+	const { success, error } = await searchParams;
+
 	return (
 		<main className="flex-1">
 			<div className="container mx-auto px-4 py-16 sm:py-24">
 				{/* Page Heading  */}
 				<div className="text-center mb-16">
-					<p className="text-4xl font-black leading-tight tracking-[-0.033em] text-text-light dark:text-text-dark sm:text-5xl md:text-6xl">
+					<p className="text-4xl font-black leading-tight tracking-[-0.033em] text-[#111318] dark:text-white sm:text-5xl md:text-6xl">
 						Let&apos;s Grow Your Business Together
 					</p>
-					<p className="text-text-muted-light dark:text-text-muted-dark text-lg font-normal leading-normal mt-4 max-w-2xl mx-auto">
+					<p className="text-gray-500 dark:text-gray-400 text-lg font-normal leading-normal mt-4 max-w-2xl mx-auto">
 						Tell us about your project and we&apos;ll reply within one business day with next steps —
 						no sales pressure, just a clear plan to move forward.
 					</p>
@@ -55,8 +62,8 @@ export default function Page() {
 									<span className="material-symbols-outlined">location_on</span>
 								</div>
 								<div className="flex flex-col justify-center">
-									<p className="text-base font-bold text-text-light dark:text-text-dark">Our Office</p>
-									<p className="text-text-muted-light dark:text-text-muted-dark text-sm">9 Joy Close, Oke-Ibukun Estate Zone 2, Elebu, off Alaka-Express Rd, Ibadan, NG. </p>
+									<p className="text-base font-bold text-[#111318] dark:text-white">Our Office</p>
+									<p className="text-gray-500 dark:text-gray-400 text-sm">9 Joy Close, Oke-Ibukun Estate Zone 2, Elebu, off Alaka-Express Rd, Ibadan, NG. </p>
 								</div>
 							</div>
 							<div className="flex items-start gap-4">
@@ -64,8 +71,8 @@ export default function Page() {
 									<span className="material-symbols-outlined">mail</span>
 								</div>
 								<div className="flex flex-col justify-center">
-									<p className="text-base font-bold text-text-light dark:text-text-dark">Email Us</p>
-									<a href="mailto:contact@samoltechconsult.com" className="text-text-muted-light dark:text-text-muted-dark text-sm">contact@SamolTechConsult.com</a>
+									<p className="text-base font-bold text-[#111318] dark:text-white">Email Us</p>
+									<a href="mailto:contact@samoltechconsult.com" className="text-gray-500 dark:text-gray-400 text-sm">contact@SamolTechConsult.com</a>
 								</div>
 							</div>
 							<div className="flex items-start gap-4">
@@ -73,8 +80,8 @@ export default function Page() {
 									<span className="material-symbols-outlined">call</span>
 								</div>
 								<div className="flex flex-col justify-center">
-									<p className="text-base font-bold text-text-light dark:text-text-dark">Call Us</p>
-									<a href="tel:+2348139723521" className="text-text-muted-light dark:text-text-muted-dark text-sm">(234) 813 9723 521</a>
+									<p className="text-base font-bold text-[#111318] dark:text-white">Call Us</p>
+									<a href="tel:+2348139723521" className="text-gray-500 dark:text-gray-400 text-sm">(234) 813 9723 521</a>
 								</div>
 							</div>
 							<div className="flex items-start gap-4">
@@ -82,8 +89,8 @@ export default function Page() {
 									<span className="material-symbols-outlined">schedule</span>
 								</div>
 								<div className="flex flex-col justify-center">
-									<p className="text-base font-bold text-text-light dark:text-text-dark">Business Hours</p>
-									<p className="text-text-muted-light dark:text-text-muted-dark text-sm">Monday - Friday: 9:00 AM - 5:00 PM GMT+1</p>
+									<p className="text-base font-bold text-[#111318] dark:text-white">Business Hours</p>
+									<p className="text-gray-500 dark:text-gray-400 text-sm">Monday - Friday: 9:00 AM - 5:00 PM GMT+1</p>
 								</div>
 							</div>
 						</div>
@@ -99,41 +106,53 @@ export default function Page() {
 
 						</div>
 					</div>
-					{/* Right Column: Contact htmlForm */}
-					<div className="bg-htmlForeground-light dark:bg-htmlForeground-dark p-8 sm:p-10 rounded-lg shadow-sm">
-						<form action="#" className="space-y-6" method="POST">
+					{/* Right Column: Contact Form */}
+					<div className="bg-white dark:bg-gray-900 p-8 sm:p-10 rounded-lg shadow-sm">
+						{success && (
+							<p className="mb-6 rounded-md bg-green-50 dark:bg-green-950 px-4 py-3 text-sm text-green-700 dark:text-green-300">
+								Thanks — your message is in. We&apos;ll reply within one business day.
+							</p>
+						)}
+						{error && (
+							<p className="mb-6 rounded-md bg-red-50 dark:bg-red-950 px-4 py-3 text-sm text-red-700 dark:text-red-300">
+								Something went wrong. Please check your details and try again.
+							</p>
+						)}
+						<form action={createContactSubmission} className="space-y-6">
 							<div>
-								<label className="block text-sm font-medium text-text-light dark:text-text-dark" htmlFor="full-name">Full Name</label>
+								<label className="block text-sm font-medium text-[#111318] dark:text-white" htmlFor="full-name">Full Name</label>
 								<div className="mt-2">
 									<input
 										autoComplete="name"
-										className="block w-full rounded-md border-0 py-2.5 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark shadow-sm ring-1 ring-inset ring-border-light dark:ring-border-dark placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:ring-2 focus:ring-inset focus:ring-primary-light sm:text-sm sm:leading-6"
+										className="block w-full rounded-md border-0 py-2.5 bg-background-light dark:bg-background-dark text-[#111318] dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
 										id="full-name"
 										name="full-name"
 										placeholder="John Doe"
+										required
 										type="text"
 									/>
 								</div>
 							</div>
 							<div>
-								<label className="block text-sm font-medium text-text-light dark:text-text-dark" htmlFor="email">Email Address</label>
+								<label className="block text-sm font-medium text-[#111318] dark:text-white" htmlFor="email">Email Address</label>
 								<div className="mt-2">
 									<input
 										autoComplete="email"
-										className="block w-full rounded-md border-0 py-2.5 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark shadow-sm ring-1 ring-inset ring-border-light dark:ring-border-dark placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:ring-2 focus:ring-inset focus:ring-primary-light sm:text-sm sm:leading-6"
+										className="block w-full rounded-md border-0 py-2.5 bg-background-light dark:bg-background-dark text-[#111318] dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
 										id="email"
 										name="email"
 										placeholder="you@example.com"
+										required
 										type="email"
 									/>
 								</div>
 							</div>
 							<div>
-								<label className="block text-sm font-medium text-text-light dark:text-text-dark" htmlFor="phone">Phone Number</label>
+								<label className="block text-sm font-medium text-[#111318] dark:text-white" htmlFor="phone">Phone Number</label>
 								<div className="mt-2">
 									<input
 										autoComplete="tel"
-										className="block w-full rounded-md border-0 py-2.5 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark shadow-sm ring-1 ring-inset ring-border-light dark:ring-border-dark placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:ring-2 focus:ring-inset focus:ring-primary-light sm:text-sm sm:leading-6"
+										className="block w-full rounded-md border-0 py-2.5 bg-background-light dark:bg-background-dark text-[#111318] dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
 										id="phone"
 										name="phone"
 										placeholder="(555) 000-0000"
@@ -142,10 +161,10 @@ export default function Page() {
 								</div>
 							</div>
 							<div>
-								<label className="block text-sm font-medium text-text-light dark:text-text-dark" htmlFor="inquiry-type">Inquiry Type</label>
+								<label className="block text-sm font-medium text-[#111318] dark:text-white" htmlFor="inquiry-type">Inquiry Type</label>
 								<div className="mt-2">
 									<select
-										className="block w-full rounded-md border-0 py-2.5 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark shadow-sm ring-1 ring-inset ring-border-light dark:ring-border-dark focus:ring-2 focus:ring-inset focus:ring-primary-light sm:text-sm sm:leading-6"
+										className="block w-full rounded-md border-0 py-2.5 bg-background-light dark:bg-background-dark text-[#111318] dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
 										id="inquiry-type"
 										name="inquiry-type"
 									>
@@ -159,26 +178,27 @@ export default function Page() {
 								</div>
 							</div>
 							<div>
-								<label className="block text-sm font-medium text-text-light dark:text-text-dark" htmlFor="message">Message</label>
+								<label className="block text-sm font-medium text-[#111318] dark:text-white" htmlFor="message">Message</label>
 								<div className="mt-2">
 									<textarea
-										className="block w-full rounded-md border-0 py-2.5 bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark shadow-sm ring-1 ring-inset ring-border-light dark:ring-border-dark placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark focus:ring-2 focus:ring-inset focus:ring-primary-light sm:text-sm sm:leading-6"
+										className="block w-full rounded-md border-0 py-2.5 bg-background-light dark:bg-background-dark text-[#111318] dark:text-white shadow-sm ring-1 ring-inset ring-gray-300 dark:ring-gray-700 placeholder:text-gray-500 dark:placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6"
 										id="message"
 										name="message"
 										placeholder="How can we help you?"
+										required
 										rows={4}
 									></textarea>
 								</div>
 							</div>
 							<div className="flex items-center gap-x-3">
 								<input
-									className="h-4 w-4 rounded border-gray-300 text-primary-light focus:ring-primary-light"
+									className="h-4 w-4 rounded border-gray-300 text-primary focus:ring-primary"
 									id="privacy-policy"
 									name="privacy-policy"
 									type="checkbox"
 								/>
-								<label className="block text-sm leading-6 text-text-muted-light dark:text-text-muted-dark" htmlFor="privacy-policy"
-								>I agree to the <a className="font-semibold text-primary-light" href="#">Privacy Policy</a>.</label
+								<label className="block text-sm leading-6 text-gray-500 dark:text-gray-400" htmlFor="privacy-policy"
+								>I agree to the <a className="font-semibold text-primary" href="#">Privacy Policy</a>.</label
 								>
 							</div>
 							<div>
