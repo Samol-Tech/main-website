@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Contact Us",
+	description:
+		"Get in touch with SamolTech Consult for a consultation, project quote, or any questions. Reach our Ibadan office by phone, email, or the contact form.",
+	openGraph: {
+		title: "Contact Us | SamolTech Consult",
+		description:
+			"Get in touch with SamolTech Consult for a consultation, project quote, or any questions. Reach our Ibadan office by phone, email, or the contact form.",
+		url: "https://samol.vercel.app/contact",
+		siteName: "SamolTech",
+		images: [
+			{
+				url: "/image/logo.jpeg",
+				width: 1200,
+				height: 630,
+				alt: "SamolTech Consult",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Contact Us | SamolTech Consult",
+		description:
+			"Get in touch with SamolTech Consult for a consultation, project quote, or any questions. Reach our Ibadan office by phone, email, or the contact form.",
+		images: ["/image/logo.jpeg"],
+		creator: "@abiodun_sam_",
+	},
+};
 
 export default function Page() {
 	return (

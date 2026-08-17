@@ -1,46 +1,45 @@
-"use client";
-
 import Link from "next/link";
-import { use, useEffect } from "react";
+import type { Metadata } from "next";
+import { HomeHeroCarousel } from "./home-hero-carousel";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "SamolTech Consult | Web, Mobile, Cloud & Cybersecurity Experts",
+  },
+  description:
+    "SamolTech Consult delivers secure, scalable web development, mobile app development, cloud & DevOps, and cybersecurity solutions that turn your ideas into digital reality.",
+  openGraph: {
+    title: "SamolTech Consult | Web, Mobile, Cloud & Cybersecurity Experts",
+    description:
+      "SamolTech Consult delivers secure, scalable web development, mobile app development, cloud & DevOps, and cybersecurity solutions that turn your ideas into digital reality.",
+    url: "https://samol.vercel.app",
+    siteName: "SamolTech",
+    images: [
+      {
+        url: "/image/logo.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "SamolTech Consult",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "SamolTech Consult | Web, Mobile, Cloud & Cybersecurity Experts",
+    description:
+      "SamolTech Consult delivers secure, scalable web development, mobile app development, cloud & DevOps, and cybersecurity solutions that turn your ideas into digital reality.",
+    images: ["/image/logo.jpeg"],
+    creator: "@abiodun_sam_",
+  },
+};
 
 export default function Home() {
-
-  useEffect(() => {
-    const slides = document.querySelectorAll(".carousel-slide");
-    const buttons = document.querySelectorAll(".carousel-slide + .absolute button.size-3"); // Select buttons after slides
-    // console.log(buttons)
-    let currentSlide = 0;
-    function showSlide(index: number): void {
-      slides.forEach((slide: Element, i: number) => {
-      const htmlSlide = slide as HTMLElement;
-      htmlSlide.style.display = i === index ? "flex" : "none"; // Use flex for vertical centering
-      });
-      buttons.forEach((button: Element, i: number) => {
-      const htmlButton = button as HTMLElement;
-      htmlButton.classList.toggle("bg-white", i === index);
-      htmlButton.classList.toggle("bg-white/50", i !== index);
-      });
-    }
-    function nextSlide() {
-      currentSlide = (currentSlide + 1) % slides.length;
-      showSlide(currentSlide);
-    }
-    // Auto-advance carousel
-    let slideInterval = setInterval(nextSlide, 5000); // Change slide every 5 seconds
-    // Manual navigation
-    buttons.forEach((button, i) => {
-      button.addEventListener("click", () => {
-        clearInterval(slideInterval); // Stop auto-advance
-        currentSlide = i;
-        showSlide(currentSlide);
-        slideInterval = setInterval(nextSlide, 5000); // Restart auto-advance
-      });
-    });
-    showSlide(currentSlide); // Initialize first slide and button state
-  }, []);
   return (
     <main className="flex flex-1 justify-center">
       <div className="layout-content-container flex flex-col max-w-full flex-1">
+        <HomeHeroCarousel />
         {/* Hero section with Carousel */}
         <section className="relative w-full overflow-hidden min-h-[500px] lg:min-h-[600px] flex items-center justify-center bg-gray-900">
           {/* First Hero  */}

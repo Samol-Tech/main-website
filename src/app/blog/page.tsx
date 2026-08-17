@@ -1,3 +1,35 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Blog",
+	description:
+		"Insights and articles from SamolTech Consult on web development, mobile apps, cloud & DevOps, and cybersecurity trends.",
+	openGraph: {
+		title: "Blog | SamolTech Consult",
+		description:
+			"Insights and articles from SamolTech Consult on web development, mobile apps, cloud & DevOps, and cybersecurity trends.",
+		url: "https://samol.vercel.app/blog",
+		siteName: "SamolTech",
+		images: [
+			{
+				url: "/image/logo.jpeg",
+				width: 1200,
+				height: 630,
+				alt: "SamolTech Consult",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Blog | SamolTech Consult",
+		description:
+			"Insights and articles from SamolTech Consult on web development, mobile apps, cloud & DevOps, and cybersecurity trends.",
+		images: ["/image/logo.jpeg"],
+		creator: "@abiodun_sam_",
+	},
+};
 
 export default function Blog() {
 	return (

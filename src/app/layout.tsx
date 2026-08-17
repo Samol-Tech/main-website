@@ -13,7 +13,11 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "SamolTech Consult",
+  metadataBase: new URL("https://samol.vercel.app"),
+  title: {
+    default: "SamolTech Consult",
+    template: "%s | SamolTech Consult",
+  },
   description: "SamolTech Consult delivers innovative, secure, and scalable digital solutions to propel your business forward. We are your trusted partner for cutting-edge software development.",
   icons: {
     icon: [
@@ -67,8 +71,6 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
           rel="stylesheet"
         />
-        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries" ></script>
-        <script src="/app.js"></script>
       </head>
       <body className={`${manrope.variable} antialiased font-display bg-background-light dark:bg-background-dark text-[#111318] dark:text-gray-200`}>
         <div className="flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">

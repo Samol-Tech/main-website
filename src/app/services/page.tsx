@@ -1,4 +1,36 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+	title: "Services",
+	description:
+		"Explore SamolTech Consult's services: website development, mobile app development, cloud & DevOps engineering, cybersecurity, and strategic IT consultancy.",
+	openGraph: {
+		title: "Services | SamolTech Consult",
+		description:
+			"Explore SamolTech Consult's services: website development, mobile app development, cloud & DevOps engineering, cybersecurity, and strategic IT consultancy.",
+		url: "https://samol.vercel.app/services",
+		siteName: "SamolTech",
+		images: [
+			{
+				url: "/image/logo.jpeg",
+				width: 1200,
+				height: 630,
+				alt: "SamolTech Consult",
+			},
+		],
+		locale: "en_US",
+		type: "website",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Services | SamolTech Consult",
+		description:
+			"Explore SamolTech Consult's services: website development, mobile app development, cloud & DevOps engineering, cybersecurity, and strategic IT consultancy.",
+		images: ["/image/logo.jpeg"],
+		creator: "@abiodun_sam_",
+	},
+};
 
 export default function Page() {
 	return (
@@ -87,7 +119,7 @@ export default function Page() {
                   </ul>
                   <Link
                     className="mt-2 font-semibold text-blue-deep transition-colors hover:text-violet-creative dark:text-violet-creative dark:hover:text-violet-creative/80"
-                    href="/contact.html"
+                    href="/contact"
                     >Get a Quote →</Link>
                 </div>
                 <div
@@ -124,7 +156,7 @@ export default function Page() {
                   </ul>
                   <a
                     className="mt-2 font-semibold text-blue-deep transition-colors hover:text-violet-creative dark:text-violet-creative dark:hover:text-violet-creative/80"
-                    href="/contact.html"
+                    href="/contact"
                     >Get a Quote →</a
                   >
                 </div>
@@ -162,7 +194,7 @@ export default function Page() {
                   </ul>
                   <a
                     className="mt-2 font-semibold text-blue-deep transition-colors hover:text-violet-creative dark:text-violet-creative dark:hover:text-violet-creative/80"
-                    href="/contact.html"
+                    href="/contact"
                     >Get a Quote →</a
                   >
                 </div>
@@ -200,7 +232,7 @@ export default function Page() {
                   </ul>
                   <a
                     className="mt-2 font-semibold text-blue-deep transition-colors hover:text-violet-creative dark:text-violet-creative dark:hover:text-violet-creative/80"
-                    href="/contact.html"
+                    href="/contact"
                     >Get a Quote →</a
                   >
                 </div>
@@ -238,7 +270,7 @@ export default function Page() {
                   </ul>
                   <a
                     className="mt-2 font-semibold text-blue-deep transition-colors hover:text-violet-creative dark:text-violet-creative dark:hover:text-violet-creative/80"
-                    href="/contact.html"
+                    href="/contact"
                     >Get a Quote →</a
                   >
                 </div>
@@ -265,7 +297,7 @@ export default function Page() {
                   </p>
                 </div>
                 <a
-                  href="/contact.html"
+                  href="/contact"
                   className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-violet-creative text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-violet-creative/90"
                 >
                   <span className="truncate">Schedule a Free Consultation</span>
@@ -308,8 +340,8 @@ export default function Page() {
                     </span>
                   </summary>
                   <p className="group-open:animate-fadeIn mt-3 text-grey-dark dark:text-gray-400">
-                    We are proficient in a wide range of modern technologies, including React, Node.js, Python, Swift for iOS, Kotlin for
-                    Android, and major cloud platforms like AWS and Azure. We select the best stack for your project&apros;s specific needs.
+                    We are proficient in a wide range of modern technologies, including React, Node.js, Python, Flutter for  
+                    Android and iOS, and major cloud platforms like AWS and Azure. We select the best stack for your project&apros;s specific needs.
                   </p>
                 </details>
                 <details className="group rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">

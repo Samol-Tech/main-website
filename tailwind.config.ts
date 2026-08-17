@@ -1,5 +1,8 @@
-tailwind.config = {
+// Tailwind config, wired up via `@config` in app/globals.css.
+// Mirrors the theme previously passed to the Tailwind CDN runtime in public/app.js.
+const config = {
   darkMode: "class",
+  content: ["./src/app/**/*.{js,ts,jsx,tsx,mdx}"],
   theme: {
     extend: {
       colors: {
@@ -15,7 +18,7 @@ tailwind.config = {
         "grey-dark": "#333333",
       },
       fontFamily: {
-        display: ["Manrope"],
+        display: ["var(--font-manrope)"],
       },
       borderRadius: {
         DEFAULT: "0.25rem",
@@ -26,3 +29,5 @@ tailwind.config = {
     },
   },
 };
+
+export default config;

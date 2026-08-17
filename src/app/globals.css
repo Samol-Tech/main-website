@@ -1,8 +1,10 @@
-/* @import "tailwindcss"; */
+@import "tailwindcss";
+@config "../../tailwind.config.ts";
+
 /* @tailwind base;
 @tailwind components;
 @tailwind utilities; */
-/* 
+/*
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -101,7 +103,7 @@ body {
   }
 
   /* Optional: style the contact CTA inside the mobile panel to be full width */
-  header.open-header nav a[href="./contact.html"] {
+  header.open-header nav a[href="./contact"] {
     margin-top: 0.5rem;
     align-self: stretch;
     display: inline-flex;
