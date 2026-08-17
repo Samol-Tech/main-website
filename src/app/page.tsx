@@ -216,7 +216,7 @@ export default function Home() {
                 <blockquote className="text-lg leading-7 text-gray-700 dark:text-gray-300">
                   <p>
                     “SamolTech Consult transformed our online presence with a stunning, high-performance website. Their team was
-                    professional, responsive, and truly understood our vision. We&apros;ve seen a significant increase in user engagement
+                    professional, responsive, and truly understood our vision. We&apos;ve seen a significant increase in user engagement
                     since the launch.”
                   </p>
                 </blockquote>

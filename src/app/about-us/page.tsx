@@ -227,7 +227,7 @@ export default function About() {
 				<div className="max-w-4xl mx-auto text-center px-4 py-16 sm:py-20 lg:py-24">
 					<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to build your next big idea?</h2>
 					<p className="mt-4 text-lg leading-8 text-white/80">
-						Let&apros;s collaborate to turn your vision into a reality. We&apros;re here to help you succeed.
+						Let&apos;s collaborate to turn your vision into a reality. We&apos;re here to help you succeed.
 					</p>
 					<div className="mt-10 flex items-center justify-center gap-x-6">
 						<Link href="/contact">

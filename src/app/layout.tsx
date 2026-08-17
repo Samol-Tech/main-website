@@ -65,8 +65,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Set the dark class before first paint so there's no flash of the wrong theme. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function () {
+              try {
+                var stored = localStorage.getItem("theme");
+                var theme = stored || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+                if (theme === "dark") document.documentElement.classList.add("dark");
+              } catch (e) {}
+            })();`,
+          }}
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
           rel="stylesheet"

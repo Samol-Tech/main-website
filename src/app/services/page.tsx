@@ -52,7 +52,7 @@ export default function Page() {
                 <button
                   className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-blue-deep text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-blue-deep/90"
                 >
-                  <span className="truncate">Let's Build Your Project</span>
+                  <span className="truncate">Let&apos;s Build Your Project</span>
                 </button>
               </div>
             </div>
@@ -290,7 +290,7 @@ export default function Page() {
                   <h1
                     className="text-blue-deep dark:text-white text-3xl font-bold leading-tight tracking-tight @[480px]:text-4xl @[480px]:font-black @[480px]:tracking-[-0.033em]"
                   >
-                    Have an Idea? Let&apros;s Make it a Reality.
+                    Have an Idea? Let&apos;s Make it a Reality.
                   </h1>
                   <p className="text-grey-dark dark:text-gray-300 text-base font-normal leading-normal max-w-xl">
                     Our team is ready to partner with you to transform your vision into powerful, effective technology.
