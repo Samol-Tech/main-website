@@ -13,12 +13,12 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://samol.vercel.app"),
+  metadataBase: new URL("https://samoltechconsult.name.ng"),
   title: {
     default: "SamolTech Consult",
     template: "%s | SamolTech Consult",
   },
-  description: "SamolTech Consult delivers innovative, secure, and scalable digital solutions to propel your business forward. We are your trusted partner for cutting-edge software development.",
+  description: "SamolTech Consult builds websites, mobile apps, and cloud systems engineered to grow your business — not just launch products. Get a free project quote today.",
   icons: {
     icon: [
       {
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "SamolTech Consult",
-    description: "SamolTech Consult delivers innovative, secure, and scalable digital solutions to propel your business forward. We are your trusted partner for cutting-edge software development.",
-    url: "https://samol.vercel.app",
+    description: "SamolTech Consult builds websites, mobile apps, and cloud systems engineered to grow your business — not just launch products. Get a free project quote today.",
+    url: "https://samoltechconsult.name.ng",
     siteName: "SamolTech",
     images: [
       {
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "SamolTech Consult",
-    description: "SamolTech Consult delivers innovative, secure, and scalable digital solutions to propel your business forward. We are your trusted partner for cutting-edge software development.",
+    description: "SamolTech Consult builds websites, mobile apps, and cloud systems engineered to grow your business — not just launch products. Get a free project quote today.",
     images: ["/image/logo.jpeg"],
     creator: "@abiodun_sam_",
   },

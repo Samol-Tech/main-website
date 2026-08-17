@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
 	title: "Blog",
 	description:
-		"Insights and articles from SamolTech Consult on web development, mobile apps, cloud & DevOps, and cybersecurity trends.",
+		"Practical strategies from SamolTech Consult to help you get more return on your technology investment — web, mobile, cloud, and security.",
 	openGraph: {
 		title: "Blog | SamolTech Consult",
 		description:
-			"Insights and articles from SamolTech Consult on web development, mobile apps, cloud & DevOps, and cybersecurity trends.",
-		url: "https://samol.vercel.app/blog",
+			"Practical strategies from SamolTech Consult to help you get more return on your technology investment — web, mobile, cloud, and security.",
+		url: "https://samoltechconsult.name.ng/blog",
 		siteName: "SamolTech",
 		images: [
 			{
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Blog | SamolTech Consult",
 		description:
-			"Insights and articles from SamolTech Consult on web development, mobile apps, cloud & DevOps, and cybersecurity trends.",
+			"Practical strategies from SamolTech Consult to help you get more return on your technology investment — web, mobile, cloud, and security.",
 		images: ["/image/logo.jpeg"],
 		creator: "@abiodun_sam_",
 	},
@@ -39,7 +39,7 @@ export default function Blog() {
 				<div className="flex w-full flex-col gap-3">
 					<p className="text-[#111318] dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Insights &amp; Articles</p>
 					<p className="text-[#616f89] dark:text-gray-400 text-base font-normal leading-normal">
-						Explore the latest in tech, from web development to cybersecurity.
+						Practical strategies to help you get more return on your technology investment.
 					</p>
 				</div>
 			</div>

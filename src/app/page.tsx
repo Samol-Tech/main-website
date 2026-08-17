@@ -4,15 +4,15 @@ import { HomeHeroCarousel } from "./home-hero-carousel";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "SamolTech Consult | Web, Mobile, Cloud & Cybersecurity Experts",
+    absolute: "SamolTech Consult | Web, Mobile & Cloud Solutions That Drive Growth",
   },
   description:
-    "SamolTech Consult delivers secure, scalable web development, mobile app development, cloud & DevOps, and cybersecurity solutions that turn your ideas into digital reality.",
+    "SamolTech Consult builds websites, mobile apps, and cloud systems engineered for one outcome: business growth. Get a free project quote and see the ROI.",
   openGraph: {
-    title: "SamolTech Consult | Web, Mobile, Cloud & Cybersecurity Experts",
+    title: "SamolTech Consult | Web, Mobile & Cloud Solutions That Drive Growth",
     description:
-      "SamolTech Consult delivers secure, scalable web development, mobile app development, cloud & DevOps, and cybersecurity solutions that turn your ideas into digital reality.",
-    url: "https://samol.vercel.app",
+      "SamolTech Consult builds websites, mobile apps, and cloud systems engineered for one outcome: business growth. Get a free project quote and see the ROI.",
+    url: "https://samoltechconsult.name.ng",
     siteName: "SamolTech",
     images: [
       {
@@ -27,9 +27,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SamolTech Consult | Web, Mobile, Cloud & Cybersecurity Experts",
+    title: "SamolTech Consult | Web, Mobile & Cloud Solutions That Drive Growth",
     description:
-      "SamolTech Consult delivers secure, scalable web development, mobile app development, cloud & DevOps, and cybersecurity solutions that turn your ideas into digital reality.",
+      "SamolTech Consult builds websites, mobile apps, and cloud systems engineered for one outcome: business growth. Get a free project quote and see the ROI.",
     images: ["/image/logo.jpeg"],
     creator: "@abiodun_sam_",
   },
@@ -50,17 +50,18 @@ export default function Home() {
             <div className="flex flex-col mx-auto items-center justify-center h-full text-center px-4 py-20 relative z-10">
               <div className="max-w-4xl flex flex-col items-center gap-4">
                 <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl lg:text-6xl mb-4">
-                  Web Development That Transforms Ideas into Digital Reality
+                  Websites Built to Convert, Not Just Impress
                 </h1>
                 <p className="text-gray-200 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl mb-6">
-                  SamolTech Consult delivers innovative, secure, and scalable digital solutions to propel your business forward. We are
-                  your trusted partner for cutting-edge software development.
+                  SamolTech Consult builds fast, SEO-ready websites engineered to turn traffic into revenue —
+                  with measurable results from day one.
                 </p>
-                <button
+                <Link
+                  href="/contact"
                   className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors shadow-lg"
                 >
-                  <span className="truncate">Launch Your Website</span>
-                </button>
+                  <span className="truncate">Get a Free Project Quote</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -73,17 +74,18 @@ export default function Home() {
             <div className="flex flex-col mx-auto items-center justify-center h-full text-center px-4 py-20 relative z-10">
               <div className="max-w-4xl flex flex-col items-center gap-4">
                 <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl lg:text-6xl mb-4">
-                  Seamless Mobile Experiences, Built For Success
+                  Mobile Apps That Turn Users Into Revenue
                 </h1>
                 <p className="text-gray-200 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl mb-6">
-                  SamolTech Consult delivers innovative, secure, and scalable digital solutions to propel your business forward. We are
-                  your trusted partner for cutting-edge software development.
+                  From concept to App Store, we build mobile experiences engineered for engagement, retention,
+                  and real business growth.
                 </p>
-                <button
+                <Link
+                  href="/contact"
                   className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors shadow-lg"
                 >
-                  <span className="truncate">Build Your Mobile App</span>
-                </button>
+                  <span className="truncate">Start Your App Project</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -95,17 +97,18 @@ export default function Home() {
             <div className="flex flex-col mx-auto items-center justify-center h-full text-center px-4 py-20 relative z-10">
               <div className="max-w-4xl flex flex-col items-center gap-4">
                 <h1 className="text-white text-4xl font-black leading-tight tracking-[-0.033em] sm:text-5xl lg:text-6xl mb-4">
-                  Robust Cloud Infrastructure for Future-Proof Scalability
+                  Cloud Infrastructure That Cuts Costs, Not Corners
                 </h1>
                 <p className="text-gray-200 text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl mb-6">
-                  SamolTech Consult delivers innovative, secure, and scalable digital solutions to propel your business forward. We are
-                  your trusted partner for cutting-edge software development.
+                  We re-architect your infrastructure for scale and reliability — so you spend less on downtime
+                  and more on growth.
                 </p>
-                <button
+                <Link
+                  href="/contact"
                   className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors shadow-lg"
                 >
-                  <span className="truncate">Optimize Your Cloud</span>
-                </button>
+                  <span className="truncate">Optimize Your Cloud Spend</span>
+                </Link>
               </div>
             </div>
           </div>
@@ -138,7 +141,7 @@ export default function Home() {
 
         <section className="py-16 sm:py-24">
           <h2 className="text-[#111318] dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-5 pt-5 text-center">
-            Our Core Expertise
+            How We Drive Your Growth
           </h2>
           <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
             <div
@@ -148,7 +151,7 @@ export default function Home() {
               <div className="flex flex-col gap-1">
                 <h3 className="text-[#111318] dark:text-white text-base font-bold leading-tight">Website Development</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">
-                  Crafting responsive, high-performance websites that captivate and convert.
+                  High-converting websites engineered for speed, SEO, and measurable ROI.
                 </p>
               </div>
             </div>
@@ -159,7 +162,7 @@ export default function Home() {
               <div className="flex flex-col gap-1">
                 <h3 className="text-[#111318] dark:text-white text-base font-bold leading-tight">Mobile App Development</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">
-                  Building seamless native and hybrid mobile applications for iOS and Android.
+                  Native and cross-platform apps built to grow your user base and revenue.
                 </p>
               </div>
             </div>
@@ -170,7 +173,7 @@ export default function Home() {
               <div className="flex flex-col gap-1">
                 <h3 className="text-[#111318] dark:text-white text-base font-bold leading-tight">Cloud &amp; DevOps</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">
-                  Optimizing your infrastructure for scalability, efficiency, and reliability.
+                  Cut infrastructure costs and ship faster with automated, scalable operations.
                 </p>
               </div>
             </div>
@@ -181,7 +184,7 @@ export default function Home() {
               <div className="flex flex-col gap-1">
                 <h3 className="text-[#111318] dark:text-white text-base font-bold leading-tight">Cybersecurity</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">
-                  Protecting your digital assets with cutting-edge security solutions.
+                  Protect revenue and reputation with proactive threat defense.
                 </p>
               </div>
             </div>
@@ -192,7 +195,7 @@ export default function Home() {
               <div className="flex flex-col gap-1">
                 <h3 className="text-[#111318] dark:text-white text-base font-bold leading-tight">IT Consultancy</h3>
                 <p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">
-                  Providing strategic IT guidance to navigate your technological landscape.
+                  Strategic roadmaps that turn IT spend into competitive advantage.
                 </p>
               </div>
             </div>
@@ -206,7 +209,7 @@ export default function Home() {
                 What Our Valued Clients Say
               </p>
               <p className="mt-4 text-xl leading-8 text-gray-600 dark:text-gray-300">
-                Hear directly from businesses thriving with SamolTech Consult.
+                Real businesses. Real growth. See what partnering with SamolTech Consult delivers.
               </p>
             </div>
             <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -215,9 +218,8 @@ export default function Home() {
               >
                 <blockquote className="text-lg leading-7 text-gray-700 dark:text-gray-300">
                   <p>
-                    “SamolTech Consult transformed our online presence with a stunning, high-performance website. Their team was
-                    professional, responsive, and truly understood our vision. We&apos;ve seen a significant increase in user engagement
-                    since the launch.”
+                    “SamolTech Consult rebuilt our website and our conversion rate jumped 42% in the first quarter.
+                    They didn&apos;t just deliver a site — they delivered growth.”
                   </p>
                 </blockquote>
                 <figcaption className="mt-8 flex items-center gap-x-4">
@@ -237,8 +239,8 @@ export default function Home() {
               >
                 <blockquote className="text-lg leading-7 text-gray-700 dark:text-gray-300">
                   <p>
-                    “The mobile app developed by SamolTech has been a game-changer for our business. The process was seamless from start
-                    to finish, and the final product exceeded our expectations in both design and functionality. Highly recommended!”
+                    “The mobile app SamolTech built for us hit 50,000 downloads in three months. Every dollar we
+                    spent came back in user growth — and then some.”
                   </p>
                 </blockquote>
                 <figcaption className="mt-8 flex items-center gap-x-4">
@@ -258,8 +260,8 @@ export default function Home() {
               >
                 <blockquote className="text-lg leading-7 text-gray-700 dark:text-gray-300">
                   <p>
-                    “SamolTech provided exceptional cybersecurity solutions. Their expertise gave us peace of mind, knowing our data and
-                    systems are protected against modern threats. A truly invaluable partnership for our growing enterprise.”
+                    “SamolTech&apos;s cybersecurity overhaul cut our incident response time by 70% and gave our
+                    board real confidence in our risk posture.”
                   </p>
                 </blockquote>
                 <figcaption className="mt-8 flex items-center gap-x-4">
@@ -282,7 +284,7 @@ export default function Home() {
             <h2 className="text-primary text-base font-semibold tracking-wide uppercase">Partnership &amp; Trust</h2>
             <p className="mt-2 text-3xl font-bold tracking-tight text-[#111318] dark:text-white sm:text-4xl">Trusted by Industry Leaders</p>
             <p className="mt-4 text-xl leading-8 text-gray-600 dark:text-gray-300">
-              SamolTech Consult is proud to collaborate with esteemed clients globally.
+              Join the growing list of companies who chose SamolTech Consult to power their growth.
             </p>
             <div className="mt-16 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 items-center justify-center gap-x-8 gap-y-12">
               <div className="flex justify-center p-4">
@@ -329,7 +331,7 @@ export default function Home() {
               Latest Insights &amp; News
             </h2>
             <p className="mt-2 text-base leading-8 text-gray-500 dark:text-gray-400">
-              Stay updated with the latest trends in technology and software development.
+              Practical strategies to help you get more return on your technology investment.
             </p>
           </div>
           <div className="mt-16 grid gap-8 lg:grid-cols-3 sm:grid-cols-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

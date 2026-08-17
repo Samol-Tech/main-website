@@ -3,12 +3,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
 	title: "Contact Us",
 	description:
-		"Get in touch with SamolTech Consult for a consultation, project quote, or any questions. Reach our Ibadan office by phone, email, or the contact form.",
+		"Tell SamolTech Consult about your project and get a free quote within one business day. Reach our Ibadan office by phone, email, or the contact form.",
 	openGraph: {
 		title: "Contact Us | SamolTech Consult",
 		description:
-			"Get in touch with SamolTech Consult for a consultation, project quote, or any questions. Reach our Ibadan office by phone, email, or the contact form.",
-		url: "https://samol.vercel.app/contact",
+			"Tell SamolTech Consult about your project and get a free quote within one business day. Reach our Ibadan office by phone, email, or the contact form.",
+		url: "https://samoltechconsult.name.ng/contact",
 		siteName: "SamolTech",
 		images: [
 			{
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Contact Us | SamolTech Consult",
 		description:
-			"Get in touch with SamolTech Consult for a consultation, project quote, or any questions. Reach our Ibadan office by phone, email, or the contact form.",
+			"Tell SamolTech Consult about your project and get a free quote within one business day. Reach our Ibadan office by phone, email, or the contact form.",
 		images: ["/image/logo.jpeg"],
 		creator: "@abiodun_sam_",
 	},
@@ -38,10 +38,11 @@ export default function Page() {
 				{/* Page Heading  */}
 				<div className="text-center mb-16">
 					<p className="text-4xl font-black leading-tight tracking-[-0.033em] text-text-light dark:text-text-dark sm:text-5xl md:text-6xl">
-						Get in Touch
+						Let&apos;s Grow Your Business Together
 					</p>
 					<p className="text-text-muted-light dark:text-text-muted-dark text-lg font-normal leading-normal mt-4 max-w-2xl mx-auto">
-						We&apos;d love to hear from you. Reach out htmlFor a consultation, a project quote, or any questions you may have.
+						Tell us about your project and we&apos;ll reply within one business day with next steps —
+						no sales pressure, just a clear plan to move forward.
 					</p>
 				</div>
 				{/* Main Content Grid */}

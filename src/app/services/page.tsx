@@ -4,12 +4,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
 	title: "Services",
 	description:
-		"Explore SamolTech Consult's services: website development, mobile app development, cloud & DevOps engineering, cybersecurity, and strategic IT consultancy.",
+		"Website development, mobile apps, cloud & DevOps, cybersecurity, and IT consultancy — every SamolTech Consult service is built to grow your bottom line.",
 	openGraph: {
 		title: "Services | SamolTech Consult",
 		description:
-			"Explore SamolTech Consult's services: website development, mobile app development, cloud & DevOps engineering, cybersecurity, and strategic IT consultancy.",
-		url: "https://samol.vercel.app/services",
+			"Website development, mobile apps, cloud & DevOps, cybersecurity, and IT consultancy — every SamolTech Consult service is built to grow your bottom line.",
+		url: "https://samoltechconsult.name.ng/services",
 		siteName: "SamolTech",
 		images: [
 			{
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "Services | SamolTech Consult",
 		description:
-			"Explore SamolTech Consult's services: website development, mobile app development, cloud & DevOps engineering, cybersecurity, and strategic IT consultancy.",
+			"Website development, mobile apps, cloud & DevOps, cybersecurity, and IT consultancy — every SamolTech Consult service is built to grow your bottom line.",
 		images: ["/image/logo.jpeg"],
 		creator: "@abiodun_sam_",
 	},
@@ -43,17 +43,19 @@ export default function Page() {
                   <h1
                     className="text-blue-deep dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[864px]:text-6xl"
                   >
-                    Innovative Digital Solutions to Power Your Business
+                    Technology Services Built to Grow Your Bottom Line
                   </h1>
                   <h2 className="text-grey-dark dark:text-gray-300 text-base font-normal leading-normal @[480px]:text-lg max-w-3xl mx-auto">
-                    From custom web applications to robust cybersecurity, we build the technology that drives your success.
+                    From high-converting websites to bulletproof cybersecurity, every service we offer is measured
+                    by the business results it delivers.
                   </h2>
                 </div>
-                <button
+                <Link
+                  href="/contact"
                   className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-blue-deep text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-blue-deep/90"
                 >
                   <span className="truncate">Let&apos;s Build Your Project</span>
-                </button>
+                </Link>
               </div>
             </div>
             {/* Chips / Service Navigation */}
@@ -103,18 +105,18 @@ export default function Page() {
                     <h3 className="text-2xl font-bold text-blue-deep dark:text-white">Website Development</h3>
                   </div>
                   <p className="text-grey-dark dark:text-gray-300">
-                    Creating responsive, high-performance websites and web apps focused on user experience, SEO, and scalability to elevate
-                    your online presence.
+                    Websites engineered to load fast, rank higher, and convert more visitors into paying
+                    customers — not just look good.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Scalable Architecture
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Built to Convert
                     </li>
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> SEO Optimized
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> SEO Optimized From Day One
                     </li>
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Enhanced User Experience
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Faster Load, Lower Bounce Rate
                     </li>
                   </ul>
                   <Link
@@ -140,18 +142,18 @@ export default function Page() {
                     <h3 className="text-2xl font-bold text-blue-deep dark:text-white">Mobile App Development</h3>
                   </div>
                   <p className="text-grey-dark dark:text-gray-300">
-                    Building engaging native and cross-platform mobile applications to expand your market reach and foster deeper user
-                    engagement on any device.
+                    Mobile apps designed to grow your user base and keep people coming back — on iOS and
+                    Android alike.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Wider Market Reach
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Faster Time to Market
+                    </li>
+                    <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Built for Retention
                     </li>
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
                       <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Native &amp; Cross-Platform
-                    </li>
-                    <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> High User Engagement
                     </li>
                   </ul>
                   <a
@@ -178,18 +180,18 @@ export default function Page() {
                     <h3 className="text-2xl font-bold text-blue-deep dark:text-white">Cloud &amp; DevOps Engineering</h3>
                   </div>
                   <p className="text-grey-dark dark:text-gray-300">
-                    Optimizing your infrastructure with CI/CD, automation, and cloud solutions for unparalleled efficiency, scalability, and
-                    operational reliability.
+                    Cloud infrastructure and CI/CD pipelines that cut costs, eliminate downtime, and let your
+                    team ship features faster.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Improved Efficiency
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Lower Infrastructure Costs
                     </li>
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Infinite Scalability
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> 99.9% Uptime Reliability
                     </li>
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Guaranteed Reliability
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Faster Release Cycles
                     </li>
                   </ul>
                   <a
@@ -216,18 +218,18 @@ export default function Page() {
                     <h3 className="text-2xl font-bold text-blue-deep dark:text-white">Cybersecurity</h3>
                   </div>
                   <p className="text-grey-dark dark:text-gray-300">
-                    Protecting your digital assets with advanced security protocols, threat intelligence, and compliance management to
-                    mitigate risks and ensure data integrity.
+                    Proactive security that protects your revenue, your data, and your reputation — before an
+                    incident happens, not after.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Proactive Risk Mitigation
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Reduced Breach Risk
                     </li>
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Robust Data Integrity
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Regulatory Compliance
                     </li>
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Compliance Assurance
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> 24/7 Threat Monitoring
                     </li>
                   </ul>
                   <a
@@ -254,18 +256,18 @@ export default function Page() {
                     <h3 className="text-2xl font-bold text-blue-deep dark:text-white">IT Consultancy</h3>
                   </div>
                   <p className="text-grey-dark dark:text-gray-300">
-                    Providing strategic technology planning and expert guidance to steer your digital transformation, optimize your return
-                    on investment, and align IT with business goals.
+                    Strategic technology roadmaps that turn every IT dollar into measurable business impact —
+                    not just another line item.
                   </p>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Guided Digital Transformation
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Clear ROI on Every Investment
                     </li>
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Optimized ROI
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Faster Digital Transformation
                     </li>
                     <li className="flex items-center gap-2 text-grey-dark dark:text-gray-300">
-                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Strategic Technology Planning
+                      <span className="material-symbols-outlined text-violet-creative text-xl">check_circle</span> Aligned With Business Goals
                     </li>
                   </ul>
                   <a
@@ -290,10 +292,11 @@ export default function Page() {
                   <h1
                     className="text-blue-deep dark:text-white text-3xl font-bold leading-tight tracking-tight @[480px]:text-4xl @[480px]:font-black @[480px]:tracking-[-0.033em]"
                   >
-                    Have an Idea? Let&apos;s Make it a Reality.
+                    Have a Project in Mind? Let&apos;s Talk Numbers.
                   </h1>
                   <p className="text-grey-dark dark:text-gray-300 text-base font-normal leading-normal max-w-xl">
-                    Our team is ready to partner with you to transform your vision into powerful, effective technology.
+                    Book a free consultation and walk away with a clear plan — timeline, cost, and expected
+                    impact on your business.
                   </p>
                 </div>
                 <a
@@ -340,8 +343,9 @@ export default function Page() {
                     </span>
                   </summary>
                   <p className="group-open:animate-fadeIn mt-3 text-grey-dark dark:text-gray-400">
-                    We are proficient in a wide range of modern technologies, including React, Node.js, Python, Flutter for  
-                    Android and iOS, and major cloud platforms like AWS and Azure. We select the best stack for your project&apros;s specific needs.
+                    We work across today&apos;s most in-demand technologies — React, Node.js, Python, Flutter for
+                    Android and iOS, and cloud platforms like AWS and Azure — and choose the right stack for your
+                    project, not the trendiest one.
                   </p>
                 </details>
                 <details className="group rounded-lg bg-white p-4 shadow-sm dark:bg-gray-800">

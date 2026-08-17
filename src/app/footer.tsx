@@ -17,7 +17,7 @@ export function Footer() {
               />
               <span>SamolTech&nbsp;Consult</span>
             </Link>
-            <p className="text-sm text-[#A0AEC0]">Engineering digital solutions that drive growth and innovation for businesses worldwide.</p>
+            <p className="text-sm text-[#A0AEC0]">Technology engineered to grow your business — not just launch products.</p>
             <div className="flex flex-col gap-4 text-sm text-[#A0AEC0]">
               <div className="flex items-start gap-3">
                 <span className="material-symbols-outlined text-primary/80 mt-0.5">location_on</span>

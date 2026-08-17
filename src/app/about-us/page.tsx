@@ -4,12 +4,12 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
 	title: "About Us",
 	description:
-		"Meet SamolTech Consult — our story, core values, and the leadership team driving innovative, secure, and scalable digital solutions for businesses worldwide.",
+		"Meet SamolTech Consult — the technology partner growth-focused businesses trust to turn ambitious ideas into measurable results.",
 	openGraph: {
 		title: "About Us | SamolTech Consult",
 		description:
-			"Meet SamolTech Consult — our story, core values, and the leadership team driving innovative, secure, and scalable digital solutions for businesses worldwide.",
-		url: "https://samol.vercel.app/about-us",
+			"Meet SamolTech Consult — the technology partner growth-focused businesses trust to turn ambitious ideas into measurable results.",
+		url: "https://samoltechconsult.name.ng/about-us",
 		siteName: "SamolTech",
 		images: [
 			{
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 		card: "summary_large_image",
 		title: "About Us | SamolTech Consult",
 		description:
-			"Meet SamolTech Consult — our story, core values, and the leadership team driving innovative, secure, and scalable digital solutions for businesses worldwide.",
+			"Meet SamolTech Consult — the technology partner growth-focused businesses trust to turn ambitious ideas into measurable results.",
 		images: ["/image/logo.jpeg"],
 		creator: "@abiodun_sam_",
 	},
@@ -45,13 +45,13 @@ export default function About() {
 				>
 					<div className="relative max-w-4xl mx-auto text-center px-4 py-16 sm:py-20 lg:py-24">
 						<h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
-							Driving Innovation, Building Futures
+							Technology Partners Who Deliver Real Business Growth
 						</h1>
 						<p className="mt-4 text-white/90 text-base md:text-lg font-normal leading-normal max-w-2xl mx-auto">
-							We are a team of passionate engineers and strategists dedicated to delivering cutting-edge software solutions that power
-							your success.
+							We&apos;re the technology partner growth-focused businesses trust to turn ambitious ideas into measurable
+							results — on time, on budget, on target.
 						</p>
-						<Link href="/service">
+						<Link href="/services">
 							<button
 								className="mt-8 flex mx-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
 							>
@@ -67,8 +67,8 @@ export default function About() {
 					<div className="max-w-3xl mx-auto text-center mb-12">
 						<h2 className="text-3xl font-bold tracking-tight text-[#111318] dark:text-white sm:text-4xl">Our Story</h2>
 						<p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-							From a small startup to a leading digital solutions provider, our journey has been one of passion, innovation, and
-							unwavering commitment to our clients.
+							From a small startup to a growth partner for ambitious businesses, our story comes down to one thing:
+							technology that performs, for clients who expect results.
 						</p>
 					</div>
 					{/*Timeline */}
@@ -82,8 +82,8 @@ export default function About() {
 								<p className="text-[#111318] dark:text-white text-lg font-medium leading-normal">The Genesis</p>
 								<p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">2018</p>
 								<p className="mt-2 text-gray-600 dark:text-gray-300">
-									Founded with a vision to revolutionize the digital landscape, DevSolutions began its journey in a small garage, fueled
-									by coffee and code.
+									Founded with a simple premise: technology should pay for itself. SamolTech Consult began its journey
+									helping small businesses compete online — and grew by keeping that promise.
 								</p>
 							</div>
 							<div className="flex flex-col items-center gap-2">
@@ -95,8 +95,8 @@ export default function About() {
 								<p className="text-[#111318] dark:text-white text-lg font-medium leading-normal">First Major Milestone</p>
 								<p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">2020</p>
 								<p className="mt-2 text-gray-600 dark:text-gray-300">
-									Launched our first enterprise-level application, winning accolades for its innovative design and robust performance,
-									marking our arrival on the tech scene.
+									Delivered our first enterprise-scale application — and the results spoke for themselves. Client
+									referrals became our biggest source of new business.
 								</p>
 							</div>
 							<div className="flex flex-col items-center gap-2 pb-3">
@@ -108,7 +108,8 @@ export default function About() {
 								<p className="text-[#111318] dark:text-white text-lg font-medium leading-normal">Expanding Horizons</p>
 								<p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">2022</p>
 								<p className="mt-2 text-gray-600 dark:text-gray-300">
-									Opened our first international office, expanding our reach and ability to serve a global client base with diverse needs.
+									Opened our first international office, so more businesses could get the same ROI-driven approach
+									that built our reputation at home.
 								</p>
 							</div>
 							<div className="flex flex-col items-center gap-2 pb-3">
@@ -119,7 +120,8 @@ export default function About() {
 								<p className="text-[#111318] dark:text-white text-lg font-medium leading-normal">Future Forward</p>
 								<p className="text-gray-500 dark:text-gray-400 text-sm font-normal leading-normal">Present</p>
 								<p className="mt-2 text-gray-600 dark:text-gray-300">
-									Continuing to push the boundaries of technology, exploring AI, and helping businesses thrive in the digital-first world.
+									Continuing to push the boundaries of technology, including AI, to help clients grow faster in an
+									increasingly digital-first market.
 								</p>
 							</div>
 						</div>
@@ -132,7 +134,7 @@ export default function About() {
 					<div className="max-w-3xl mx-auto text-center mb-12">
 						<h2 className="text-3xl font-bold tracking-tight text-[#111318] dark:text-white sm:text-4xl">Our Core Values</h2>
 						<p className="mt-4 text-lg text-gray-600 dark:text-gray-400">
-							The principles that guide our every decision and define our character.
+							The principles that guide every project — and every dollar of your investment.
 						</p>
 					</div>
 					<div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
@@ -142,7 +144,7 @@ export default function About() {
 							</div>
 							<h3 className="mt-5 text-lg font-medium text-[#111318] dark:text-white">Innovation</h3>
 							<p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-								We constantly explore new technologies and ideas to deliver forward-thinking solutions.
+								We use the latest technology because it gives your business a real, measurable edge — not for its own sake.
 							</p>
 						</div>
 						<div className="text-center p-6 rounded-xl transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800">
@@ -151,7 +153,7 @@ export default function About() {
 							</div>
 							<h3 className="mt-5 text-lg font-medium text-[#111318] dark:text-white">Integrity</h3>
 							<p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-								We believe in transparent, honest, and ethical practices in all our engagements.
+								Transparent pricing, honest timelines, and straight answers — no surprises, ever.
 							</p>
 						</div>
 						<div className="text-center p-6 rounded-xl transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800">
@@ -160,7 +162,7 @@ export default function About() {
 							</div>
 							<h3 className="mt-5 text-lg font-medium text-[#111318] dark:text-white">Partnership</h3>
 							<p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-								Your success is our success. We work collaboratively to achieve shared goals.
+								We measure our success by your results. When you grow, we&apos;ve done our job.
 							</p>
 						</div>
 						<div className="text-center p-6 rounded-xl transition-all duration-300 hover:bg-gray-100 dark:hover:bg-gray-800">
@@ -169,7 +171,7 @@ export default function About() {
 							</div>
 							<h3 className="mt-5 text-lg font-medium text-[#111318] dark:text-white">Excellence</h3>
 							<p className="mt-2 text-sm text-gray-600 dark:text-gray-400">
-								We are committed to the highest standards of quality in Services and services.
+								Every project is held to the highest standard, because your success is the only outcome that matters.
 							</p>
 						</div>
 					</div>
@@ -225,19 +227,19 @@ export default function About() {
 			{/*CTA Section */}
 			<section className="bg-primary/90">
 				<div className="max-w-4xl mx-auto text-center px-4 py-16 sm:py-20 lg:py-24">
-					<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to build your next big idea?</h2>
+					<h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">Ready to Turn Your Idea Into Revenue?</h2>
 					<p className="mt-4 text-lg leading-8 text-white/80">
-						Let&apos;s collaborate to turn your vision into a reality. We&apos;re here to help you succeed.
+						Book a free consultation and get a clear roadmap — no obligation, no jargon, just a plan to grow.
 					</p>
 					<div className="mt-10 flex items-center justify-center gap-x-6">
 						<Link href="/contact">
 							<button
 								className="min-w-[84px] cursor-pointer rounded-lg bg-white h-12 px-5 text-primary text-base font-bold leading-normal tracking-[0.015em] hover:bg-gray-100 transition-colors"
 							>
-								<span className="truncate">Work With Us</span>
+								<span className="truncate">Book a Free Consultation</span>
 							</button>
 						</Link>
-						<Link className="text-base font-semibold leading-6 text-white" href="#">Learn more <span aria-hidden="true">→</span></Link>
+						<Link className="text-base font-semibold leading-6 text-white" href="/services">See what we do <span aria-hidden="true">→</span></Link>
 					</div>
 				</div>
 			</section>
