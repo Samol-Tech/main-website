@@ -13,7 +13,7 @@ const postSchema = z.object({
   excerpt: z.string().min(10, "Excerpt must be at least 10 characters.").max(300),
   content: z.string().min(20, "Content must be at least 20 characters."),
   category: z.enum(BLOG_CATEGORIES),
-  coverImage: z.string().url("Cover image must be a valid URL.").optional().or(z.literal("")),
+  coverImage: z.url("Cover image must be a valid URL.").optional().or(z.literal("")),
   status: z.enum(["DRAFT", "PUBLISHED"]),
 });
 
@@ -78,6 +78,7 @@ export async function createPost(formData: FormData) {
 
   revalidatePath("/admin/posts");
   revalidatePath("/blog");
+  revalidatePath("/");
   redirect("/admin/posts");
 }
 
@@ -126,6 +127,7 @@ export async function updatePost(id: string, formData: FormData) {
   revalidatePath("/admin/posts");
   revalidatePath("/blog");
   revalidatePath(`/blog/${slug}`);
+  revalidatePath("/");
   redirect("/admin/posts");
 }
 
@@ -135,6 +137,7 @@ export async function deletePost(id: string) {
   revalidatePath("/admin/posts");
   revalidatePath("/blog");
   revalidatePath(`/blog/${post.slug}`);
+  revalidatePath("/");
 }
 
 export async function togglePublish(id: string) {
@@ -153,4 +156,5 @@ export async function togglePublish(id: string) {
   revalidatePath("/admin/posts");
   revalidatePath("/blog");
   revalidatePath(`/blog/${post.slug}`);
+  revalidatePath("/");
 }

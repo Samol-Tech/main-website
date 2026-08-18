@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { HomeHeroCarousel } from "./home-hero-carousel";
+import { prisma } from "@/lib/prisma";
 
 export const metadata: Metadata = {
   title: {
@@ -35,7 +36,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
+export default async function Home() {
+  const latestPosts = await prisma.post.findMany({
+    where: { status: "PUBLISHED" },
+    orderBy: { publishedAt: "desc" },
+    take: 3,
+  });
+
   return (
     <main className="flex flex-1 justify-center">
       <div className="layout-content-container flex flex-col max-w-full flex-1">
@@ -334,99 +341,59 @@ export default function Home() {
               Practical strategies to help you get more return on your technology investment.
             </p>
           </div>
-          <div className="mt-16 grid gap-8 lg:grid-cols-3 sm:grid-cols-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <article
-              className="flex flex-col items-start justify-between bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg hover:-translate-y-1 transition-all"
-            >
-              <div className="relative w-full">
-                <img
-                  className="aspect-[16/9] w-full rounded-lg bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-                  alt="Desk with a keyboard and a journal"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2vUa2piuMrY9IlKe5MNNirNeJ2VVTFh2TqDfsvt4MSnfVdspGI_4KWB37STVkShe-nbOneLXMXVL_qXkXNWy5jl-HepE8H6VLUpirNL71Y9fhHQWMwie2GoTjFM5n6RsumZV0gFl6Lj9OofDD55TIoQls1mgfp7dq_GdLD55YBl9X4CSGAKEGSoMi5zUh5veoXnpqcHmlcoTZ2-9J1o9nGB1Rb6s8_gAM8Mh8j2L0NqomK9NZ0tLsD2YPapuogzbIHBhn20E62UJ3"
-                />
-                <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-900/10"></div>
-              </div>
-              <div className="max-w-xl mt-6">
-                <div className="flex items-center gap-x-4 text-xs">
-                  <time className="text-gray-500" dateTime="2023-10-26">Oct 26, 2023</time>
-                  <Link className="relative z-10 rounded-full bg-primary/10 px-3 py-1.5 font-medium text-primary hover:bg-primary/20" href="#"
-                  >Development</Link>
-
-                </div>
-                <div className="group relative">
-                  <h3
-                    className="mt-3 text-lg font-semibold leading-6 text-[#111318] dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300"
-                  >
-                    <Link href="#"><span className="absolute inset-0"></span>The Rise of Serverless Architecture</Link>
-                  </h3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-400">
-                    Explore how serverless computing is changing the way we build and deploy applications, offering scalability and
-                    cost-efficiency.
-                  </p>
-                </div>
-              </div>
-            </article>
-            <article
-              className="flex flex-col items-start justify-between bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg hover:-translate-y-1 transition-all"
-            >
-              <div className="relative w-full">
-                <img
-                  className="aspect-[16/9] w-full rounded-lg bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-                  alt="Person typing on a laptop with code on screen"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDldPNp0mpdRIuhga28lRfHNvarNBI7IKvngjrI_vA7ehg4dzUsP6DNkteD0rWn_tgHOQB6ZsWzN9GfbfuAoiCC9p9Q5Hty3-nw50BPP7FmHBPbDk4L4OYIzQGzcd1lcDIuBMz2IOmnuO7KSRvVw5UL_VV0rXIqTXbAKw0SNrv6IYeKDpIQZItQAf-15J9OQletST8cZ7z1Krye05onWD81LVH2fDSWBiPKTIm8t80IY7zkAshL77yaQTzcXU8q-YZNGNimtQ0qkEf5"
-                />
-                <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-900/10"></div>
-              </div>
-              <div className="max-w-xl mt-6">
-                <div className="flex items-center gap-x-4 text-xs">
-                  <time className="text-gray-500" dateTime="2023-10-24">Oct 24, 2023</time>
-                  <Link className="relative z-10 rounded-full bg-primary/10 px-3 py-1.5 font-medium text-primary hover:bg-primary/20" href="#"
-                  >Cybersecurity</Link>
-                </div>
-                <div className="group relative">
-                  <h3
-                    className="mt-3 text-lg font-semibold leading-6 text-[#111318] dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300"
-                  >
-                    <Link href="#"><span className="absolute inset-0"></span>5 Essential Cybersecurity Practices for 2024</Link>
-                  </h3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-400">
-                    Protect your business from evolving threats with these fundamental cybersecurity measures that every organization
-                    should implement.
-                  </p>
-                </div>
-              </div>
-            </article>
-            <article
-              className="flex flex-col items-start justify-between bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg hover:-translate-y-1 transition-all"
-            >
-              <div className="relative w-full">
-                <img
-                  className="aspect-[16/9] w-full rounded-lg bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
-                  alt="Team collaborating around a table with laptops"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdDoiM2UC9V2kTLwc7ZNoS_3zag5Jg-rb747tIlxRV6IKmzGkEsq1TRqg_JOkuDEZeZOE0X4r1M_dp7rHgOCxuqayw9vb04gMjdK5EaF4GrB6wqXi4HmoNNUgbpYR-r71O7aSQYKMws6l8t7gggu3kAtlUNw0P4Gltk6ofYTfrlow9kXHNu6u33QzndBtKPaZllU__6i6Dk49iNUqi-8QaXAoaXgULvqsiEYh4Sg9WG0tXTwo9XOXNWWl8MKQ7Svvu3kQzWpIFy2FO"
-                />
-                <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-900/10"></div>
-              </div>
-              <div className="max-w-xl mt-6">
-                <div className="flex items-center gap-x-4 text-xs">
-                  <time className="text-gray-500" dateTime="2023-10-21">Oct 21, 2023</time>
-                  <Link className="relative z-10 rounded-full bg-primary/10 px-3 py-1.5 font-medium text-primary hover:bg-primary/20" href="#"
-                  >Cloud</Link>
-                </div>
-                <div className="group relative">
-                  <h3
-                    className="mt-3 text-lg font-semibold leading-6 text-[#111318] dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300"
-                  >
-                    <Link href="#"><span className="absolute inset-0"></span>Optimizing Cloud Costs Without Sacrificing Performance</Link>
-                  </h3>
-                  <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-400">
-                    Learn effective strategies to manage and reduce your cloud infrastructure expenses while maintaining high
-                    performance and reliability.
-                  </p>
-                </div>
-              </div>
-            </article>
-          </div>
+          {latestPosts.length > 0 ? (
+            <div className="mt-16 grid gap-8 lg:grid-cols-3 sm:grid-cols-2 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              {latestPosts.map((post) => (
+                <article
+                  key={post.id}
+                  className="flex flex-col items-start justify-between bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg hover:-translate-y-1 transition-all"
+                >
+                  {post.coverImage && (
+                    <div className="relative w-full">
+                      <img
+                        className="aspect-[16/9] w-full rounded-lg bg-gray-100 object-cover sm:aspect-[2/1] lg:aspect-[3/2]"
+                        alt={post.title}
+                        src={post.coverImage}
+                      />
+                      <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-gray-900/10"></div>
+                    </div>
+                  )}
+                  <div className="max-w-xl mt-6">
+                    <div className="flex items-center gap-x-4 text-xs">
+                      <time className="text-gray-500" dateTime={(post.publishedAt ?? post.createdAt).toISOString()}>
+                        {(post.publishedAt ?? post.createdAt).toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        })}
+                      </time>
+                      <Link
+                        className="relative z-10 rounded-full bg-primary/10 px-3 py-1.5 font-medium text-primary hover:bg-primary/20"
+                        href={`/blog?category=${encodeURIComponent(post.category)}`}
+                      >
+                        {post.category}
+                      </Link>
+                    </div>
+                    <div className="group relative">
+                      <h3 className="mt-3 text-lg font-semibold leading-6 text-[#111318] dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300">
+                        <Link href={`/blog/${post.slug}`}>
+                          <span className="absolute inset-0"></span>
+                          {post.title}
+                        </Link>
+                      </h3>
+                      <p className="mt-5 line-clamp-3 text-sm leading-6 text-gray-600 dark:text-gray-400">
+                        {post.excerpt}
+                      </p>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          ) : (
+            <p className="mt-16 text-center text-gray-500 dark:text-gray-400">
+              New articles are on the way — check back soon.
+            </p>
+          )}
         </section>
       </div>
     </main>

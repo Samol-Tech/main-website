@@ -7,7 +7,7 @@ import { prisma } from "@/lib/prisma";
 
 const submissionSchema = z.object({
   fullName: z.string().min(2, "Please enter your full name."),
-  email: z.string().email("Please enter a valid email address."),
+  email: z.email("Please enter a valid email address."),
   phone: z.string().optional().or(z.literal("")),
   inquiryType: z.string().min(1),
   message: z.string().min(10, "Message must be at least 10 characters."),
