@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { createContactSubmission } from "./actions";
+import { ClearStatusParam } from "./clear-status-param";
 
 export const metadata: Metadata = {
 	title: "Contact Us",
@@ -109,18 +110,18 @@ export default async function Page({
 					</div>
 					{/* Right Column: Contact Form */}
 					<div className="bg-white dark:bg-gray-900 p-8 sm:p-10 rounded-lg shadow-sm">
-						{success && (
+						{(success || error) && <ClearStatusParam />}
+						{success ? (
 							<p className="mb-6 rounded-md bg-green-50 dark:bg-green-950 px-4 py-3 text-sm text-green-700 dark:text-green-300">
 								Thanks — your message is in. We&apos;ll reply within one business day.
 							</p>
-						)}
-						{error && (
+						) : error ? (
 							<p className="mb-6 rounded-md bg-red-50 dark:bg-red-950 px-4 py-3 text-sm text-red-700 dark:text-red-300">
 								{error === "captcha"
 									? "We couldn't verify you're human. Please try the form again."
 									: "Something went wrong. Please check your details and try again."}
 							</p>
-						)}
+						) : null}
 						<Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive" />
 						<form action={createContactSubmission} className="space-y-6">
 							<div>
