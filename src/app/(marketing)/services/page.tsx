@@ -34,30 +34,34 @@ export const metadata: Metadata = {
 
 export default function Page() {
 	return (
-		<main className="flex flex-1 justify-center py-5">
-          <div className="layout-content-container flex w-full max-w-6xl flex-col gap-10 px-4 sm:px-6 md:px-8">
-            {/* HeroSection */}
-            <div className="@container w-full">
-              <div className="flex flex-col items-center gap-6 px-4 py-10 text-center @[480px]:gap-8 @[864px]:py-20">
-                <div className="flex flex-col gap-4">
-                  <h1
-                    className="text-blue-deep dark:text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[864px]:text-6xl"
-                  >
-                    Technology Services Built to Grow Your Bottom Line
-                  </h1>
-                  <h2 className="text-grey-dark dark:text-gray-300 text-base font-normal leading-normal @[480px]:text-lg max-w-3xl mx-auto">
-                    From high-converting websites to bulletproof cybersecurity, every service we offer is measured
-                    by the business results it delivers.
-                  </h2>
-                </div>
-                <Link
-                  href="/contact"
-                  className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-blue-deep text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors hover:bg-blue-deep/90"
+		<main className="flex flex-1 flex-col">
+          {/* HeroSection - full viewport width; text column stays constrained, same pattern as about-us */}
+          <div
+            className="min-h-[480px] bg-cover bg-center bg-no-repeat flex items-center justify-center"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.88)), url('/image/services-hero.jpg')",
+            }}
+          >
+            <div className="relative max-w-4xl mx-auto text-center px-4 py-16 sm:py-20 lg:py-24">
+              <h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
+                Technology Services Built to Grow Your Bottom Line
+              </h1>
+              <h2 className="mt-4 text-white/90 text-base md:text-lg font-normal leading-normal max-w-2xl mx-auto">
+                From high-converting websites to bulletproof cybersecurity, every service we offer is measured
+                by the business results it delivers.
+              </h2>
+              <Link href="/contact">
+                <button
+                  className="mt-8 flex mx-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-violet-creative text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-violet-creative/90 transition-colors"
                 >
                   <span className="truncate">Let&apos;s Build Your Project</span>
-                </Link>
-              </div>
+                </button>
+              </Link>
             </div>
+          </div>
+          <div className="flex w-full justify-center py-5">
+          <div className="layout-content-container flex w-full max-w-6xl flex-col gap-10 px-4 sm:px-6 md:px-8">
             {/* Chips / Service Navigation */}
             <div className="flex flex-wrap items-center justify-center gap-3 p-3 overflow-x-auto">
               <a
@@ -362,6 +366,7 @@ export default function Page() {
                 </details>
               </div>
             </div>
+          </div>
           </div>
         </main>
 	);

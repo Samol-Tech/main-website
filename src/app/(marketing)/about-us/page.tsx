@@ -37,11 +37,12 @@ export default function About() {
 		<main className="flex-grow">
 			{/*HeroSection */}
 			<section className="relative">
-				<div className="absolute inset-0 bg-background-dark opacity-50"></div>
 				<div
 					className="min-h-[480px] bg-cover bg-center bg-no-repeat flex items-center justify-center"
-					style=
-					{{ backgroundImage: "url(https://lh3.googleusercontent.com/aida-public/AB6AXuDdhLRbduEs2jtf4oRIzXiApA1GcywCa-eyJxUv43LacUH8HYmsQuMBaoIqz1dMdS72bZshwB5wPHtHN0XTWBa79esBp9NHgizJEvomiHPlBsAjUXQqB4jqby5VLhNIqe0GVhiw_MS5_pz78pCTF_D9NKh0dTsgL3sgWYjaaX16GEgigREknrTyC3PmygOoMe9F482yx-mkjnE1HHb_Crjqi7VvfCBs6mUUD1Ef8ORWpx77oGqFRBpZYPTYvxQeP2GOvHn9quU_p-Uc);" }}
+					style={{
+						backgroundImage:
+							"linear-gradient(rgba(10, 37, 64, 0.75), rgba(10, 37, 64, 0.85)), url('/image/about-hero.jpg')",
+					}}
 				>
 					<div className="relative max-w-4xl mx-auto text-center px-4 py-16 sm:py-20 lg:py-24">
 						<h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">
