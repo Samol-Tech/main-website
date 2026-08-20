@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { createContactSubmission } from "./actions";
 
 export const metadata: Metadata = {
@@ -115,9 +116,12 @@ export default async function Page({
 						)}
 						{error && (
 							<p className="mb-6 rounded-md bg-red-50 dark:bg-red-950 px-4 py-3 text-sm text-red-700 dark:text-red-300">
-								Something went wrong. Please check your details and try again.
+								{error === "captcha"
+									? "We couldn't verify you're human. Please try the form again."
+									: "Something went wrong. Please check your details and try again."}
 							</p>
 						)}
+						<Script src="https://challenges.cloudflare.com/turnstile/v0/api.js" strategy="afterInteractive" />
 						<form action={createContactSubmission} className="space-y-6">
 							<div>
 								<label className="block text-sm font-medium text-[#111318] dark:text-white" htmlFor="full-name">Full Name</label>
@@ -201,6 +205,7 @@ export default async function Page({
 								>I agree to the <a className="font-semibold text-primary" href="#">Privacy Policy</a>.</label
 								>
 							</div>
+							<div className="cf-turnstile" data-sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY} data-theme="auto"></div>
 							<div>
 								<button
 									className="flex w-full justify-center rounded-full bg-primary px-3 py-3 text-sm font-semibold leading-6 text-white shadow-sm hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary transition-opacity"
