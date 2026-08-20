@@ -49,11 +49,11 @@ export default async function Blog({
 		...(category ? { category } : {}),
 		...(q
 			? {
-					OR: [
-						{ title: { contains: q, mode: "insensitive" as const } },
-						{ excerpt: { contains: q, mode: "insensitive" as const } },
-					],
-				}
+				OR: [
+					{ title: { contains: q, mode: "insensitive" as const } },
+					{ excerpt: { contains: q, mode: "insensitive" as const } },
+				],
+			}
 			: {}),
 	};
 
@@ -115,11 +115,10 @@ export default async function Blog({
 				<div className="flex gap-2 p-3 flex-wrap justify-center">
 					<Link
 						href={buildHref({ category: undefined })}
-						className={`flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full pl-4 pr-4 transition-colors ${
-							!category
-								? "bg-primary text-white hover:bg-primary/90"
-								: "bg-white dark:bg-background-dark/50 text-[#111318] dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-						}`}
+						className={`flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full pl-4 pr-4 transition-colors ${!category
+							? "bg-primary text-white hover:bg-primary/90"
+							: "bg-white dark:bg-background-dark/50 text-[#111318] dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+							}`}
 					>
 						<p className="text-sm font-medium leading-normal">All</p>
 					</Link>
@@ -127,11 +126,10 @@ export default async function Blog({
 						<Link
 							key={cat}
 							href={buildHref({ category: cat })}
-							className={`flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full pl-4 pr-4 transition-colors ${
-								category === cat
-									? "bg-primary text-white hover:bg-primary/90"
-									: "bg-white dark:bg-background-dark/50 text-[#111318] dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
-							}`}
+							className={`flex h-8 shrink-0 items-center justify-center gap-x-2 rounded-full pl-4 pr-4 transition-colors ${category === cat
+								? "bg-primary text-white hover:bg-primary/90"
+								: "bg-white dark:bg-background-dark/50 text-[#111318] dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700"
+								}`}
 						>
 							<p className="text-sm font-medium leading-normal">{cat}</p>
 						</Link>
@@ -152,16 +150,20 @@ export default async function Blog({
 							className="bg-white dark:bg-background-dark/50 rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300"
 						>
 							{post.coverImage && (
-								<div
-									className="w-full bg-center bg-no-repeat aspect-video bg-cover"
-									style={{ backgroundImage: `url('${post.coverImage}')` }}
-								></div>
+								<Link href={`/blog/${post.slug}`}>
+									<div
+										className="w-full bg-center bg-no-repeat aspect-video bg-cover"
+										style={{ backgroundImage: `url('${post.coverImage}')` }}
+									></div>
+								</Link>
 							)}
 							<div className="p-6 flex flex-col gap-4">
 								<p className="text-primary text-sm font-bold leading-normal">{post.category}</p>
-								<p className="text-[#111318] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
-									{post.title}
-								</p>
+								<Link href={`/blog/${post.slug}`}>
+									<p className="text-[#111318] dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">
+										{post.title}
+									</p>
+								</Link>
 								<p className="text-[#616f89] dark:text-gray-400 text-base font-normal leading-normal">
 									{post.excerpt}
 								</p>
@@ -184,43 +186,45 @@ export default async function Blog({
 						</div>
 					))}
 				</div>
-			)}
+			)
+			}
 			{/* Pagination */}
-			{totalPages > 1 && (
-				<div className="flex justify-center p-4 pt-8">
-					<nav className="flex items-center gap-2">
-						{page > 1 && (
-							<Link
-								className="flex h-10 w-10 items-center justify-center rounded-lg text-[#616f89] dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-								href={buildHref({ page: page - 1 })}
-							>
-								<span className="material-symbols-outlined text-xl">chevron_left</span>
-							</Link>
-						)}
-						{Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
-							<Link
-								key={pageNumber}
-								className={`flex h-10 w-10 items-center justify-center rounded-lg transition-colors ${
-									pageNumber === page
+			{
+				totalPages > 1 && (
+					<div className="flex justify-center p-4 pt-8">
+						<nav className="flex items-center gap-2">
+							{page > 1 && (
+								<Link
+									className="flex h-10 w-10 items-center justify-center rounded-lg text-[#616f89] dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+									href={buildHref({ page: page - 1 })}
+								>
+									<span className="material-symbols-outlined text-xl">chevron_left</span>
+								</Link>
+							)}
+							{Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNumber) => (
+								<Link
+									key={pageNumber}
+									className={`flex h-10 w-10 items-center justify-center rounded-lg transition-colors ${pageNumber === page
 										? "bg-primary text-white"
 										: "text-[#111318] dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
-								}`}
-								href={buildHref({ page: pageNumber })}
-							>
-								{pageNumber}
-							</Link>
-						))}
-						{page < totalPages && (
-							<Link
-								className="flex h-10 w-10 items-center justify-center rounded-lg text-[#616f89] dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
-								href={buildHref({ page: page + 1 })}
-							>
-								<span className="material-symbols-outlined text-xl">chevron_right</span>
-							</Link>
-						)}
-					</nav>
-				</div>
-			)}
-		</main>
+										}`}
+									href={buildHref({ page: pageNumber })}
+								>
+									{pageNumber}
+								</Link>
+							))}
+							{page < totalPages && (
+								<Link
+									className="flex h-10 w-10 items-center justify-center rounded-lg text-[#616f89] dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+									href={buildHref({ page: page + 1 })}
+								>
+									<span className="material-symbols-outlined text-xl">chevron_right</span>
+								</Link>
+							)}
+						</nav>
+					</div>
+				)
+			}
+		</main >
 	);
 }

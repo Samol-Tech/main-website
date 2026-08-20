@@ -126,8 +126,8 @@ export default function Page() {
                 </div>
                 <div
                   className="w-full rounded-xl bg-center bg-no-repeat aspect-video bg-cover md:w-1/2"
-                  data-alt="Abstract gradient representing web development"
-                  style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBwAxhcQhJRFhRCPvOsjjTYXLhqBKQt9kXvtubn6lxjDhwBnG6Z4UrYnuZ2ZO06gNkR0q1-NIaPtG5bmw_FPY-yy4_mBdDkth6bpyZ__qK9JTPRa5nvMdEiHfxB3LkYofdy1Zus6w_G7uPUc-NqGtewKLTgY2xRiYIClPDj1HTDHJheDe-DBhLsk2slgNxOni-QjOwpOlGnfyi7pdPlCSgRyX3jXO1cjGjlalkP0-ZFXUY6vXsUUw8_gBDgx22AZ-Yv7SS9J0tkIyOc')"}}
+                  data-alt="Close-up of HTML/SVG code on a screen, representing web development"
+                  style={{backgroundImage: "url('/image/services/web-development.jpg')"}}
                   ></div>
               </div>
               {/* Service Card: Mobile App Development */}
@@ -164,8 +164,8 @@ export default function Page() {
                 </div>
                 <div
                   className="w-full rounded-xl bg-center bg-no-repeat aspect-video bg-cover md:w-1/2"
-                  data-alt="Abstract pattern representing mobile apps"
-                  style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCkxdqNf81rwR5oHI5FpwKyNCftJBtvEh-uZFr-W4iMxve38IAJT6B3EtQQbyMuGU0DP7RWfaEcUOgx5px8Toan4fKaVkgsy2_vicluxRBfv_vbxrlRwYiB_LHKVudM8kUVLrSEYPanZObxC5vf_DQLf1C1n3OSlLWQykfcpakXBUTlVlJ_HpWJYKTfdrN_800O-bS7cVbFvqf10C8vbChEfQX8LEr8dQgwMyL4LX6PebpZPAQK-Qrarsbb1CQdTOqNUNDjyBaQlo56')"}}
+                  data-alt="Smartphone home screen with app icons, representing mobile app development"
+                  style={{backgroundImage: "url('/image/services/mobile-apps.jpg')"}}
                 ></div>
               </div>
               {/* Service Card: Cloud & DevOps */}
@@ -202,8 +202,8 @@ export default function Page() {
                 </div>
                 <div
                   className="w-full rounded-xl bg-center bg-no-repeat aspect-video bg-cover md:w-1/2"
-                  data-alt="Geometric shapes representing cloud infrastructure"
-                  style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuDCkJJTN1d5P7V5rn49pTrFtTMjoD4zjc-FR77GI6H42slwWEFqnI8pfvIHcvGcd5lNJpL2sGyVta_gXp4lZ_KR5FzLf_wnYammyCfgNdR77C8gzYrd-3_J3yOJdXUU4aV1JagNTscuMqqxeNr7zysPyeovt2RWGI4WRCUbIJRbPlgRhQXZE6BunGwnJNHtz9Xvjmpy2oiwkyr3LHRK7YyKcx-TIUj5MLG33JYM9H390yiEcSZOo7mmEUBwu0LRyDEfKHr3apm9DD9E')"}}
+                  data-alt="Server rack with status lights, representing cloud infrastructure"
+                  style={{backgroundImage: "url('/image/services/cloud-devops.jpg')"}}
                 ></div>
               </div>
               {/* Service Card: Cybersecurity */}
@@ -240,8 +240,8 @@ export default function Page() {
                 </div>
                 <div
                   className="w-full rounded-xl bg-center bg-no-repeat aspect-video bg-cover md:w-1/2"
-                  data-alt="Digital shield graphic for cybersecurity"
-                  style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuAN4WwNf7sZWMiG0piGoeRk8p4zwG1uufyhRziGdZmNRM2cn3ZKgM6jUhmE9BdtNNuSlP346j2SmPa1ra-_IQJ4A10-LEnDnaNPZt87-VqYfQJpJQsMwlRIRvjrvMgaLSu43niYG2wOmRpajqO1iYh_CaryMbhZzQknekVR5FjpRv_bI3x3GzyYJLEUTcrZVQIu6pSbRD-G358djgs9aca0piCqmqmNzuRvBXiuDG9ky8HeSbb5eTMbSZHGVaGhyciPOgaPmhvwqKhl')"}}
+                  data-alt="Padlock resting on a keyboard, representing cybersecurity"
+                  style={{backgroundImage: "url('/image/services/cybersecurity.jpg')"}}
                 ></div>
               </div>
               {/* Service Card: IT Consultancy */}
@@ -278,8 +278,8 @@ export default function Page() {
                 </div>
                 <div
                   className="w-full rounded-xl bg-center bg-no-repeat aspect-video bg-cover md:w-1/2"
-                  data-alt="Abstract visual representing strategic planning"
-                  style={{backgroundImage: "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCzebG0pEDgXw9CxxUveErf2n7PdUFjUehzGPMK3Ee64GxfgsPP4prCPdsFXBc5Ch46g6_1WnD0b51beGfsWn3atofSMjrPpvzDqcKXvV0_nbBLKW12-H5e5IHBajN7uSVJ_-GcZJfKdFiwtFBuN-66E0-jI8JdfqGvRwvUogtZKZMj8Birzr6sXf_Jzrsumb-0KUwlk5i-snduQCBDNrtGZrgm5TS32n5to6VhWrIas2W5kZORfdL1k3TiaZZ10cQZDEmwMwHcM1Zq')"}}
+                  data-alt="Team gathered around a table taking notes, representing strategic consultancy"
+                  style={{backgroundImage: "url('/image/services/it-consultancy.jpg')"}}
                 ></div>
               </div>
             </div>

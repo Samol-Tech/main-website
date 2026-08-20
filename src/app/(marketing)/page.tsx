@@ -52,7 +52,7 @@ export default async function Home() {
           {/* First Hero  */}
           <div
             className="absolute inset-0 z-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out carousel-slide"
-            style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url('./image/code-hero.png')" }}
+            style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url('/image/code-hero.png')" }}
           >
             <div className="flex flex-col mx-auto items-center justify-center h-full text-center px-4 py-20 relative z-10">
               <div className="max-w-4xl flex flex-col items-center gap-4">
@@ -76,7 +76,7 @@ export default async function Home() {
           {/*Second hero */}
           <div
             className="absolute inset-0 z-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out carousel-slide"
-            style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url('./image/mobile-hero.jpg')" }}
+            style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url('/image/mobile-hero.jpg')" }}
           >
             <div className="flex flex-col mx-auto items-center justify-center h-full text-center px-4 py-20 relative z-10">
               <div className="max-w-4xl flex flex-col items-center gap-4">
@@ -99,7 +99,7 @@ export default async function Home() {
           {/* Third Hero  */}
           <div
             className="absolute inset-0 z-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out carousel-slide"
-            style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url('./image/cloud-hero.jpg')" }}
+            style={{ backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%), url('/image/cloud-hero.jpg')" }}
           >
             <div className="flex flex-col mx-auto items-center justify-center h-full text-center px-4 py-20 relative z-10">
               <div className="max-w-4xl flex flex-col items-center gap-4">
@@ -233,7 +233,7 @@ export default async function Home() {
                   <img
                     className="h-12 w-12 rounded-full bg-gray-50"
                     alt="Photo of Sarah Johnson"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7EMrP6rpZNDudAM4aZzP-MbpWrsdqYzZ3yzECm-3kXx7xLChthL2kkx1N15Ux6mfntnhC5xnJaYBVM6tcfhJPeTV7nTVTaeqWMceqaFUhJlolesZiItVcuJiOQtLFChhCYr7vC9JBf_Co15LLNJamEYL1e8y2exIzgZ35Waqpj71jK2I65ZXQyUoxVViJ6J1HzbkO2jTxaM_Eq0uqAs6faOjsSwHw4Fya3iM1bOn0gmIxCDS5uG9cj_A3w75J3Ca83qhqBXtMkQrk"
+                    src="/image/testimonials/sarah-johnson.png"
                   />
                   <div>
                     <div className="font-semibold text-[#111318] dark:text-white">Sarah Johnson</div>
@@ -254,7 +254,7 @@ export default async function Home() {
                   <img
                     className="h-12 w-12 rounded-full bg-gray-50"
                     alt="Photo of Michael Chen"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGqg1cEFg9TMI8aTVsii2QQXWBeCFanIy89DAd5jh8f2AqOjuWE0Vwv9FIk8oiDFK38x8XT37rxCyBHnMdRUJTLjc1HZf6KWqf-QQUbdJOC-kqJuspH3fp2XN79XFxVJT2ePL84A-xXfSFbnJVIPu_DKOaQiyb0DZAyEC6MJ8ZNxzfnwyAEsLPKRDsaXv8dH7Aa1b8_xXKcBOneDOCHVa2ZJtOrPDUGTbT48rb4pp3TBQOlJ-NFUX2bdYRWjRa9vn9BlxUaw81S3oq"
+                    src="/image/testimonials/michael-chen.png"
                   />
                   <div>
                     <div className="font-semibold text-[#111318] dark:text-white">Michael Chen</div>
@@ -275,7 +275,7 @@ export default async function Home() {
                   <img
                     className="h-12 w-12 rounded-full bg-gray-50"
                     alt="Photo of Emily White"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmOyAzBowU-ROtu2Tj_LGUQQhttnVc9GSjpybHajrg1e3p73FYSltB2JX-K5hW4IXH-e3lQwKfbtmNuhZ27VTdyuaTAHkRvjtOtSU2UKDxhGAaVY5FKgtvfrAd4V9pBRaOt8m9YMwOpdJsHJDhRDd2xAWW3tkt_J9apfQUyzT-aQNZgQhVEf7SiwGeG394yHlzUFGlcpUgi3rlDfO86kMT5c0NBiHGROPIZTa0vDA0yJ06-slOQv2OcNMXbFHuFuiazwevJKgrrao2"
+                    src="/image/testimonials/emily-white.png"
                   />
                   <div>
                     <div className="font-semibold text-[#111318] dark:text-white">Emily White</div>
@@ -298,35 +298,35 @@ export default async function Home() {
                 <img
                   className="h-12 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   alt="Client logo 1"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmOyAzBowU-ROtu2Tj_LGUQQhttnVc9GSjpybHajrg1e3p73FYSltB2JX-K5hW4IXH-e3lQwKfbtmNuhZ27VTdyuaTAHkRvjtOtSU2UKDxhGAaVY5FKgtvfrAd4V9pBRaOt8m9YMwOpdJsHJDhRDd2xAWW3tkt_J9apfQUyzT-aQNZgQhVEf7SiwGeG394yHlzUFGlcpUgi3rlDfO86kMT5c0NBiHGROPIZTa0vDA0yJ06-slOQv2OcNMXbFHuFuiazwevJKgrrao2"
+                  src="/image/clients/logo-1.png"
                 />
               </div>
               <div className="flex justify-center p-4">
                 <img
                   className="h-12 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   alt="Client logo 2"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAthkSmRgtlaHUxoR4xzTatb5KCL9vzWjBhDswzHHIgMwJ_ECAojKbiMHN33mt7hbcFsbdYdbf7Pqdl3cnAr9gR7j5NnsxkpNWC9Mcp8rdiwcW9qcZig1t_3lVFA4kabZPbBg7irRaigzaOPUQnVbPqlNguc3Svo2Xu9IyZTSTDQnxPjZM__pNTaOiYZjjOkx5Kx4V-GwebxbcBA439EeeIWusU-BJI4O0Cnn9xeFAT7AiH3Cg5JvVdUqR-Bsp-dT6EcN4VWpxi-5dJ"
+                  src="/image/clients/logo-2.png"
                 />
               </div>
               <div className="flex justify-center p-4">
                 <img
                   className="h-12 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   alt="Client logo 3"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQURrm2xxcZrZkNVrQQ-9ksLN76k8hfbLHdBRdUJvIhRhLI0A60rvtRLKbr-njeGkhsZt_MZn1FIRHWPpOG-07dt5OqtAJMtzrt6s3QHQCFLHbnjvBkU28Fo7oBrCo9fpKnFDgtF2mKoHUmjRBQl2bIAUuYSkibkFQmMJROjKhaMaCUXU6yf7OOIGB9l2WttP5BHLJoCfXGFE3Q0f4UJPfKpYM7UaUxQ5J_S3tBvQV6VhPjDAC117qju_N2bvojkqA99P24JjT4S6A"
+                  src="/image/clients/logo-3.png"
                 />
               </div>
               <div className="flex justify-center p-4">
                 <img
                   className="h-12 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   alt="Client logo 4"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeyAf1UcVe54W8sfR4NUxV0C-FQyXgqfFyLRvW9ePuJOer8Z8uMJ9ogdFJjsbSb2gfK6g9Z7Bqa738E0u46iEvFhS-bQMuCqUSIknFf04CydSFYOQ-3fxQk2jnUsDNZanUHXUJ0HuEabIk8HsEWaWWfHd4QV877ZZrzGl-GKA7HecjicB7v-7m-kNbr2Hx_p5dTQrtQEFLWvTHT1KDo8fUX1U-utbYqSlv9kKPJPmEkXMc4DnwKUcwqsqyWvjS13xwHaCvovJFZ1jd"
+                  src="/image/clients/logo-4.png"
                 />
               </div>
               <div className="flex justify-center p-4">
                 <img
                   className="h-12 w-auto object-contain grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
                   alt="Client logo 5"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAex2hz97Baa78SXAPyBRd_ILHrm_EpjamUU7YwIELk1aGRmf9tZqIg0KDJ-vpsi2R4rYHHzRhL_mFmMf51HpHY4U1iF3i5I_cFiZIAfb7Vb8Va4IBiU8qaJRkT9f3GVta9pyzwk-6KXe8HD05EoIOlMyBxpjX2zQCYms8xdjaQf5maIxElWhIGKxSgqbqSTAApqAl24k3J9e7bKXjpyQ8r3jROUN7EsVi06j3ng3xCHNuJW045RhdFktUoRn5NZAKFYuI96T0FMxPJ"
+                  src="/image/clients/logo-5.png"
                 />
               </div>
             </div>
@@ -346,7 +346,7 @@ export default async function Home() {
               {latestPosts.map((post) => (
                 <article
                   key={post.id}
-                  className="flex flex-col items-start justify-between bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg hover:-translate-y-1 transition-all"
+                  className="relative flex flex-col items-start justify-between bg-white dark:bg-background-dark rounded-xl border border-gray-200 dark:border-gray-800 p-6 hover:shadow-lg hover:-translate-y-1 transition-all"
                 >
                   {post.coverImage && (
                     <div className="relative w-full">
@@ -374,9 +374,11 @@ export default async function Home() {
                         {post.category}
                       </Link>
                     </div>
-                    <div className="group relative">
+                    <div className="group">
                       <h3 className="mt-3 text-lg font-semibold leading-6 text-[#111318] dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300">
                         <Link href={`/blog/${post.slug}`}>
+                          {/* Positioned against the article (now `relative`), not this
+                              div, so the whole card — image included — is clickable. */}
                           <span className="absolute inset-0"></span>
                           {post.title}
                         </Link>

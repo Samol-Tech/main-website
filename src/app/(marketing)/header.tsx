@@ -61,18 +61,18 @@ export function Header() {
 							<div className="flex items-center gap-9">
 								<Link
 									className="text-[#111318] dark:text-gray-200 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal"
-									href="./services"
+									href="/services"
 								>Services </Link>
 								<Link
 									className="text-[#111318] dark:text-gray-200 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal"
-									href="./about-us"
+									href="/about-us"
 								>About Us</Link>
 								<Link
 									className="text-[#111318] dark:text-gray-200 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal"
-									href="./blog"
+									href="/blog"
 								>Blog</Link>
 								<Link
-									href="./contact"
+									href="/contact"
 									className="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors"
 								>
 									<span className="truncate">Contact Us</span>
