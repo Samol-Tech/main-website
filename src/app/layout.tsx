@@ -16,20 +16,10 @@ export const metadata: Metadata = {
     template: "%s | SamolTech Consult",
   },
   description: "SamolTech Consult builds websites, mobile apps, and cloud systems engineered to grow your business — not just launch products. Get a free project quote today.",
-  icons: {
-    icon: [
-      {
-        media: '(prefers-color-scheme: light)',
-        url: '/image/logo.jpeg',
-        href: '/image/logo.jpeg',
-      },
-      {
-        media: '(prefers-color-scheme: dark)',
-        url: '/image/logo.jpeg',
-        href: '/image/logo.jpeg',
-      },
-    ],
-  },
+  // Tab/bookmark icons are handled by Next's file convention instead
+  // (src/app/favicon.ico, icon.png, apple-icon.png — all generated from the
+  // logo) — Next auto-detects those and injects correctly-typed <link>
+  // tags, so no icons field is needed here.
   openGraph: {
     title: "SamolTech Consult",
     description: "SamolTech Consult builds websites, mobile apps, and cloud systems engineered to grow your business — not just launch products. Get a free project quote today.",

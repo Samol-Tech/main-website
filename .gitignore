@@ -44,3 +44,5 @@ samol.code-workspace
 
 .claude
 CLAUDE.md
+scripts-scratch-create-post.ts
+scripts-scratch-list-posts.ts
